@@ -1,2 +1,2 @@
-# astro-tailwind
-Astro with Tailwind
+# Astro with Tailwind
+

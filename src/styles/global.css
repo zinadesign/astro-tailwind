@@ -1,0 +1,7 @@
+html {
+  @apply scroll-smooth font-sans;
+}
+
+p {
+  @apply text-gray-dark;
+}

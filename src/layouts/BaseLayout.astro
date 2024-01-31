@@ -1,0 +1,33 @@
+---
+import "@styles/main.css";
+import Footer from "@components/Footer.astro";
+const { pageTitle, pageDescription } = Astro.props;
+---
+
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <link rel="canonical" href={Astro.url} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <a href="#main" class="skip-to-main">Перейти до вмісту</a>
+    <main id="main" class="">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+
+  <style>
+    .skip-to-main {
+      @apply sr-only;
+      &:focus {
+        @apply text-brand not-sr-only !absolute left-1/2 top-0 z-50 -translate-x-1/2 rounded-b bg-white px-4 pb-1.5 pt-1 text-center font-semibold leading-tight;
+      }
+    }
+  </style>
+</html>

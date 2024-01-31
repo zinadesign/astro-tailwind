@@ -1,16 +1,14 @@
 ---
-
+import BaseLayout from "@layouts/BaseLayout.astro";
+const pageTitle = "Astro";
+const pageDescription = "";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1 class="text-5xl text-blue-600">Astro</h1>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
+  <div class="container">
+    <h1 class="text-brand my-4 font-serif text-5xl">
+      {pageTitle}
+    </h1>
+    <p>Content</p>
+  </div>
+</BaseLayout>
